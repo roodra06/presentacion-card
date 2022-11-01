@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>{{nombre}}</h1>
     <div class="card targeta" style="width: 18rem;">
       <img class="card-img-top" src="../assets/futbol.png" alt="Card image cap">
       <div class="card-body">
@@ -42,6 +43,11 @@
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Likes',
+  computed: {
+    nombre() {
+      return this.$store.state.nombre;
+    },
+  },
 };
 </script>
 
