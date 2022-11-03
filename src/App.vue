@@ -2,8 +2,8 @@
   <div id="app">
     <nav>
       <strong><router-link to="/">Who I am?</router-link></strong> |
-      <strong><router-link to="/about">My Likes</router-link></strong> |
-      <strong><router-link to="/about2">About 2</router-link></strong>
+      <strong><router-link to="/my-likes">My Likes</router-link></strong> |
+      <strong><router-link to="/be-with-my-girl">Be with my Girl</router-link></strong>
     </nav>
     <router-view />
   </div>
@@ -17,6 +17,7 @@
   text-align: center;
   color: #2c3e50;
   background-image: linear-gradient(rgba(52, 237, 222, 0.55), rgba(9, 0, 236, 0.59));
+  min-height: 100vh;
 }
 
 nav {

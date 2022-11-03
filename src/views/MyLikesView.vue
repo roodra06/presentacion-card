@@ -1,16 +1,16 @@
 <template>
   <div class="about">
-    <HelloWorld></HelloWorld>
+    <my-likes />
   </div>
 </template>
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/Likes.vue';
+import MyLikes from '@/components/MyLikes.vue';
 
 export default {
-  name: 'HomeView',
+  name: 'MyLikes',
   components: {
-    HelloWorld,
+    'my-likes': MyLikes,
   },
 };
 </script>

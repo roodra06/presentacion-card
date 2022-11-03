@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ nombreFromStore }}</h1>
-    <p>I'am: {{ edad }}</p>
+    <MyChangeAgeButton />
+    <PersonalData />
     <p>Hey! Hello everybody, welcome to my profile, this is a place where you can know</p>
     <p>somethings about me, y want to show all my projects talking about programming</p>
     <p>I'm really exited to show you all my history as a programmer</p>
@@ -88,15 +88,20 @@
 </template>
 
 <script>
+import PersonalData from '@/components/PersonalData.vue';
+import MyChangeAgeButton from '@/components/MyChangeAgeButton.vue';
+
 export default {
   name: 'HelloWorld',
+  components: {
+    PersonalData,
+    MyChangeAgeButton,
+  },
   props: {
     msg: String,
   },
   data() {
-    return {
-      edad: 15,
-    };
+    return {};
   },
   computed: {
     miComputed() {
@@ -106,6 +111,9 @@ export default {
     },
     nombreFromStore() {
       return this.$store.state.nombre;
+    },
+    edadFromStore() {
+      return this.$store.state.edad;
     },
   },
 };
@@ -127,6 +135,8 @@ li {
 a {
   color: #ffffff;
 }
+
 .hello {
+  font-size: 1.2em;
 }
 </style>
