@@ -1,5 +1,6 @@
 <template>
   <div>
+    <personal-data />
     <div class="card targeta" style="width: 18rem;">
       <img class="card-img-top" src="../assets/futbol.png" alt="Card image cap">
       <div class="card-body">
@@ -39,9 +40,21 @@
 </template>
 
 <script>
+import PersonalData from '@/components/PersonalData.vue';
+
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Likes',
+  name: 'MyLikes',
+  components: {
+    'personal-data': PersonalData,
+  },
+  computed: {
+    nombre() {
+      return this.$store.state.nombre;
+    },
+    edadFromStore() {
+      return this.$store.state.edad;
+    },
+  },
 };
 </script>
 
