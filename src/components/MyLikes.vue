@@ -61,8 +61,8 @@ export default {
 <style scoped>
 .targeta {
   display: inline-block;
-  background: #2c3e50;
-  color: white;
+  background: #2E424D;
+  color: #EAEBED;
   height: 30em;
   margin-bottom: 200px;
 }
